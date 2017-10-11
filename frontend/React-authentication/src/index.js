@@ -16,7 +16,7 @@ import FoodJokes from './components/FoodJokes';
 import {
   BrowserRouter,
   Route,
-  Link
+  //Link
 } from 'react-router-dom';
 
 const Root = () => {
@@ -25,7 +25,7 @@ const Root = () => {
     
       <BrowserRouter >
       <div className="container">
-        <Route path="/" component={FoodJokes}/>
+        <Route path="/" exact={true} component={FoodJokes}/>
         <Route path="/special" component={CelebrityJokes}/>
        </div>
       </BrowserRouter>
