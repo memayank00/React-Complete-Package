@@ -13,18 +13,20 @@ class FoodJokes extends Component {
 
   getFoodJokes() {
     getFoodData().then((jokes) => {
+      //console.log("jokes-- "+JSON.stringify(jokes));
       this.setState({ jokes });
     });
   }
 
   componentDidMount() {
+    
     this.getFoodJokes();
   }
 
   render() {
 
     const { jokes }  = this.state;
-
+   
     return (
       <div>
         <Nav />

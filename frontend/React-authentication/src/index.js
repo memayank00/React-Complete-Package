@@ -12,6 +12,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CelebrityJokes from './components/CelebrityJokes';
 import FoodJokes from './components/FoodJokes';
+import signup from './components/user/signup';
 //import { Router, Route, browserHistory } from 'react-router';
 import {
   BrowserRouter,
@@ -27,6 +28,9 @@ const Root = () => {
       <div className="container">
         <Route path="/" exact={true} component={FoodJokes}/>
         <Route path="/special" component={CelebrityJokes}/>
+
+        <Route path="/signup" component={signup}/>
+
        </div>
       </BrowserRouter>
 
