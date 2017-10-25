@@ -17,12 +17,9 @@ open two terminals.
 https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html
 
 ### Branch Name
-<<<<<<< HEAD
 master
 
 ### Video chat application fallow link
 
 http://jssip.net/
-=======
-develop
->>>>>>> f7eb78dc114080d8aa8dc01b1cfa3b855abef611
+
