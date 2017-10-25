@@ -32,21 +32,42 @@ class signup extends Component {
           aria-labelledby="contained-modal-title"
         >
           <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title">Contained Modal</Modal.Title>
+            <Modal.Title id="contained-modal-title">Signup Form</Modal.Title>
           </Modal.Header>
           <Modal.Body>
            Please Fill Your Information
            <div>
-            <form className="modal-content">
-            <div className="container">
-            <span> 
-              Username - <input type="text" name="username" onChange={(e) => this.change(e)}/>
-              Email - <input type="text" name="email" onChange={(e) => this.change(e)}/>
-              Password - <input type="password" name="password" onChange={(e) => this.change(e)}/>
-              Age - <input type="number" name="age" onChange={(e) => this.change(e)}/>
-                 </span>
-              <button onClick={(e) => this.submit(e)}> submit </button> <br /><br /><br />
+            <form className="form-horizontal">
+            
+
+            <div className="col-sm-12">
+              <div className="form-group">
+                  <input type="text" name="username" className="form-control" placeholder="Username" onChange={(e) => this.change(e)}/>
+              </div>
             </div>
+
+            <div className="col-sm-12">
+              <div className="form-group">
+                  <input type="text" name="email" className="form-control" placeholder="Email" onChange={(e) => this.change(e)}/>
+              </div>
+            </div>
+            <div className="col-sm-12">
+              <div className="form-group">
+                  <input type="password" name="password" className="form-control" placeholder="Password" onChange={(e) => this.change(e)}/>
+              </div>
+            </div>
+            <div className="col-sm-12">
+              <div className="form-group">
+                  <input type="number" name="age" className="form-control" placeholder="Age" onChange={(e) => this.change(e)}/>
+              </div>
+            </div>
+
+            <div className="col-sm-12">
+              <div className="form-group">
+                  <button onClick={(e) => this.submit(e)}> submit </button>
+              </div>
+            </div>
+
             </form>
            </div>
           </Modal.Body>
