@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Modal,Button} from 'react-bootstrap';
+import axios from 'axios';
 
 class signup extends Component {
 
@@ -80,13 +81,22 @@ class signup extends Component {
     );
   }
   change(e){
-  console.log(e.target.name);
-  console.log(e.target.value);
+  //console.log(e.target.name);
+  //console.log(e.target.value);
   //{this.state.username} - {this.state.email} - {this.state.password} - {this.state.age}
   this.setState({[e.target.name]: e.target.value});
   }
-  submit(){
+  submit(ev){
+    ev.preventDefault(); // to prevent close popup
+
   console.log("state--- "+JSON.stringify(this.state));
+  axios.post('http://localhost:3333/api/signup', this.state)
+    .then(function (response) {
+      console.log('response-- '+JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 }
 

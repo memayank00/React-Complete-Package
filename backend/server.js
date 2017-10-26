@@ -85,5 +85,9 @@ app.get('/api/jokes/celebrity', (req,res) => {
   res.json(CelebrityJokes);
 })
 
+app.post('/api/signup',(req,res)=>{
+  console.log(req.body);
+  res.json({message:'Congratulations! You have Succefully Registered'});
+})
 app.listen(3333);
 console.log('Listening on localhost:3333');
